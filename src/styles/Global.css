@@ -1,0 +1,45 @@
+:root{
+    /* Cores */
+    --blue: #4f8ef7;
+    --blue-hover: #616FDA;
+    --blue-dim: rgba(79,142,247,0.15);
+    --purple: #9b6dff;
+    --purple-dim: rgba(155,109,255,0.12);
+    --cyan: #38d9f5;
+    
+
+    --bg: #07090f;
+    --bg2: #0d1117;
+    --bg3: #111620;
+
+    --surface: rgba(255,255,255,0.04);
+    --surface-hover: rgba(255,255,255,0.07);
+    --glass: rgba(255,255,255,0.05);
+    --glass-border: rgba(255,255,255,0.10);
+
+    --text: #f0f4ff;
+    --text-dim: rgba(240,244,255,0.55);
+
+    --text-muted: rgba(240,244,255,0.30);
+    --accent-grad: linear-gradient(135deg, var(--blue), var(--purple));
+
+    /* Fontes */
+    --font-h: 'Syne', sans-serif;
+    --font-b: 'DM Sans', sans-serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-h);
+    color: var(--text);
+}
+
+body{
+    background-color: var(--bg);
+    width: 100vw;
+}
+
+
