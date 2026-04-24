@@ -1,10 +1,13 @@
+
+/* Mobile */
+
 header{ 
-    height: 70px;
+    height: 90px;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
+    padding: 0 25px;
     border-bottom: 1px solid rgba(253, 253, 253, 0.11);
 
 }
@@ -13,11 +16,22 @@ header h1{
     color: var(--blue);
 }
 
-nav{
+.nav-cabecalho {
     font-size: 18px;
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    flex-direction: column;
+    gap: 25px;
+    padding: 5px;
+
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    width: 190px;
+
+    transform: translateX(100%);
+    transition: 0.3s;
 }
 
 .link-nav{
@@ -25,10 +39,10 @@ nav{
     text-decoration: none;
     display: inline-block;
     padding: 5px 10px;
-    border-radius: 6px;
 }
 
-.link-nav:hover{
+
+.link-nav:active{
     color: var(--text); 
     transform: scale(1.01)
 }
@@ -36,20 +50,91 @@ nav{
 /* Menu Hambúrguer */
 
 button.hamburguer{
-    display: flex;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    display: none;
+display: flex;
+background: transparent;
+border: none;
+cursor: pointer;
 }
 
-.material-symbols-outlined:hover{
+.material-symbols-outlined:active{
     color: rgba(79, 141, 247, 0.582);
 }
 
 .material-symbols-outlined{
     font-size: 35px;
 }
+
+
+.nav-cabecalho.ativo {
+transform: translateX(0);
+}
+
+
+/* Tablet */
+@media (min-width: 768px) {
+    
+    header{ 
+        height: 80px;
+        padding: 0 50px;
+    }
+    
+    .nav-cabecalho{
+        width: 40%;
+        position: static;
+        transform: none;
+        background: transparent;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    
+    .link-nav:active{
+        color: var(--text); 
+        transform: scale(1.01)
+    }
+    
+    /* Menu Hambúrguer */
+    
+    button.hamburguer{
+        display: none;
+    }
+}
+
+
+
+
+/* Desktop */
+@media (min-width: 1024px) {
+    
+    header{ 
+        height: 70px;
+        padding: 0 100px;
+    }
+    
+    .nav-cabecalho{
+        position: static;
+        transform: none;
+        background: transparent;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    
+    .link-nav:hover{
+        color: var(--text); 
+        transform: scale(1.01)
+    }
+    
+    /* Menu Hambúrguer */
+    
+    button.hamburguer{
+        display: none;
+    }
+}
+
+
 
 
 
