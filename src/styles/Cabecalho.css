@@ -1,46 +1,70 @@
 
 /* Mobile */
 
-header{ 
+header{
+    width: 100%;
+    border-bottom: 1px solid rgba(253, 253, 253, 0.11);
+}
+
+.cabecalho{ 
     height: 90px;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 0 25px;
-    border-bottom: 1px solid rgba(253, 253, 253, 0.11);
+    padding: 0 10px;
+    gap: 35px;
 
 }
 
 header h1{
+    width: 100px;
     color: var(--blue);
+    font-size: 20px;
+    line-height: 15px;
 }
 
 .nav-cabecalho {
-    font-size: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding: 5px;
-
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: #111;
-    flex-direction: column;
-    width: 190px;
-
-    transform: translateX(100%);
-    transition: 0.3s;
+    display: none
 }
 
 .link-nav{
+    width: 100%;
+    height: 50%;
     color: rgba(255, 255, 255, 0.637);
     text-decoration: none;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: end;
     padding: 5px 10px;
+    
 }
 
+.nav-cabecalho.ativo {
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    gap: 25px;
+
+
+    position: fixed;
+    top: 11.5%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+
+
+
+    width: 100%;
+    height: 200px;
+    background: rgba(7, 9, 15, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    border-bottom: 1px solid var(--glass-border);
+
+}
 
 .link-nav:active{
     color: var(--text); 
@@ -57,69 +81,46 @@ cursor: pointer;
 }
 
 .material-symbols-outlined:active{
+    transform: scale(1.01);
     color: rgba(79, 141, 247, 0.582);
 }
 
 .material-symbols-outlined{
-    font-size: 35px;
+    font-size: 40px;
 }
-
-
-.nav-cabecalho.ativo {
-transform: translateX(0);
-}
-
-
-/* Tablet */
-@media (min-width: 768px) {
-    
-    header{ 
-        height: 80px;
-        padding: 0 50px;
-    }
-    
-    .nav-cabecalho{
-        width: 40%;
-        position: static;
-        transform: none;
-        background: transparent;
-
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-    
-    .link-nav:active{
-        color: var(--text); 
-        transform: scale(1.01)
-    }
-    
-    /* Menu Hambúrguer */
-    
-    button.hamburguer{
-        display: none;
-    }
-}
-
-
 
 
 /* Desktop */
 @media (min-width: 1024px) {
     
     header{ 
-        height: 70px;
-        padding: 0 100px;
+        height: 90px;
+        width: 100%;
+        border-bottom: 1px solid rgba(253, 253, 253, 0.11);
+    }
+
+    header h1{
+        font-size: 30px;
+        line-height: 20px;
+
+}
+
+    .cabecalho{
+        margin: 0 auto;
+        width: 1300px;
+        justify-content: space-between;
+
     }
     
     .nav-cabecalho{
         position: static;
         transform: none;
-        background: transparent;
-
+        background: transparent;   
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-direction: row;
+        gap: 100px;
+        font-size: 18px;
     }
     
     .link-nav:hover{

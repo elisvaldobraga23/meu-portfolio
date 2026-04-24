@@ -13,22 +13,23 @@ export function Cabecalho(){
     }
 
     return (
-        <header className="cabecalho">
-            <h1>DEV.</h1>
+        <header>
 
-            <button className='hamburguer' onClick={toggleMenu}>
-                <span className="material-symbols-outlined">
-menu
-</span>
-            </button>
+            <div className='cabecalho'>
+                <h1>Elisvaldo <span>Braga</span></h1>
+                <button className='hamburguer' onClick={toggleMenu}>
+                    <span className="material-symbols-outlined">
+                menu
+                </span>
+                </button>
+                <nav className={aberto ? "nav-cabecalho ativo" : "nav-cabecalho"}>
+                   <Link to="/" className="link-nav" onClick={toggleMenu}>Inicio</Link>
+                   <Link to="/sobre" className="link-nav" onClick={toggleMenu}>Sobre</Link>
+                   <Link to="/projetos" className="link-nav" onClick={toggleMenu}>Projetos</Link>
+                </nav>
+                <LinkBotao to="/contato" className="link-btn-cabecalho">Fale Comigo</LinkBotao>
+            </div>
 
-
-            <nav className={aberto ? "nav-cabecalho ativo" : "nav-cabecalho"}>
-               <Link to="/" className="link-nav" onClick={toggleMenu}>Inicio</Link>
-               <Link to="/sobre" className="link-nav" onClick={toggleMenu}>Sobre</Link>
-               <Link to="/projetos" className="link-nav" onClick={toggleMenu}>Projetos</Link>
-            </nav>
-            <LinkBotao to="/contato" className="link-btn-cabecalho">Fale Comigo</LinkBotao>
         </header>
     )
 }

@@ -1,13 +1,13 @@
-
-
+/* Botão Cabeçalho */
+/* Mobile */
 .link-btn-cabecalho{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 125px;
+    width: 95px;
     height: 40px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 600;
     border-radius: 20px;
     background-color: var(--blue);
@@ -15,16 +15,46 @@
     border: none;
     cursor: pointer;
 }
-
-.link-btn-cabecalho:hover{
+    
+.link-btn-cabecalho:active{
     background-color: var(--blue-hover);
     color: var(--accent-grad);
 }
 
+/* Tablet */
+@media (min-width: 768px) {
+    .link-btn-cabecalho{
+    width: 150px;
+    height: 45px;
+    font-size: 15px;
+
+}
+}
+
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .link-btn-cabecalho{
+        width: 125px;
+        height: 40px;
+        font-size: 15px;
+
+    }
+    
+    .link-btn-cabecalho:hover{
+        background-color: var(--blue-hover);
+        color: var(--accent-grad);
+    }
+    
+}
+
+
 /* Botão Seção Inicio */
+
+/* Mobile */
 .btn-inicio{
-    width: 22%;
-    height: 90%;
+    width: 130px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +79,7 @@
 
 /* Botão Contatos */
 .link-btn-contato{
-    background: transparent;
+     
     border: 1px solid var(--glass-border);
 }
 
@@ -57,6 +87,48 @@
     border-color: rgba(79,142,247,0.5); 
     background: var(--blue-dim); 
     transform: translateY(-2px); 
+}
+
+
+/* Desktop */
+@media (min-width: 1024px) {
+    
+    .btn-inicio{
+        width: 22%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 25px;
+        font-size: 1em;
+        font-weight: 500;
+        text-decoration: none;
+    
+    }
+    
+    /* Botão Ver Projetos */
+    .link-btn-projetos{
+        background: var(--accent-grad);
+       
+    }
+    
+    .link-btn-projetos:hover{
+        transform: translateY(-2px); 
+        box-shadow: 0 12px 40px rgba(79,142,247,0.35);
+    }
+    
+    /* Botão Contatos */
+    .link-btn-contato{
+        background: transparent;
+        border: 1px solid var(--glass-border);
+    }
+    
+    .link-btn-contato:hover { 
+        border-color: rgba(79,142,247,0.5); 
+        background: var(--blue-dim); 
+        transform: translateY(-2px); 
+    }
 }
 
 
