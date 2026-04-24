@@ -1,3 +1,5 @@
+
+
 .link-btn-cabecalho{
     display: flex;
     align-items: center;
@@ -20,10 +22,9 @@
 }
 
 /* Botão Seção Inicio */
-.link-btn-projetos{
-    background: var(--accent-grad);
-    width: 25%;
-    height: 100%;
+.btn-inicio{
+    width: 22%;
+    height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,10 +33,30 @@
     font-size: 1em;
     font-weight: 500;
     text-decoration: none;
+
+}
+
+/* Botão Ver Projetos */
+.link-btn-projetos{
+    background: var(--accent-grad);
+   
 }
 
 .link-btn-projetos:hover{
     transform: translateY(-2px); 
     box-shadow: 0 12px 40px rgba(79,142,247,0.35);
 }
+
+/* Botão Contatos */
+.link-btn-contato{
+    background: transparent;
+    border: 1px solid var(--glass-border);
+}
+
+.link-btn-contato:hover { 
+    border-color: rgba(79,142,247,0.5); 
+    background: var(--blue-dim); 
+    transform: translateY(-2px); 
+}
+
 

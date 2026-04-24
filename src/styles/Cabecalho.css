@@ -33,5 +33,23 @@ nav{
     transform: scale(1.01)
 }
 
+/* Menu Hambúrguer */
+
+button.hamburguer{
+    display: flex;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.material-symbols-outlined:hover{
+    color: rgba(79, 141, 247, 0.582);
+}
+
+.material-symbols-outlined{
+    font-size: 35px;
+}
+
 
 

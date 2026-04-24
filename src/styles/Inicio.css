@@ -9,15 +9,26 @@ section.inicio{
 
 section.inicio h1{
     font-size: 6em;
-    line-height: 75%;
+    line-height: 70%;
+    letter-spacing:-4px;
 }
 
 section.inicio p{
-    font-size: 1.5em;
+    font-family: var(--font-b);
+    font-size: 1.2em;
+    color: var(--text-dim);
+    max-width: 500px;
+    font-weight: 300;
+    line-height: 35px;
 }
 
 span{
     color: var(--blue);
+}
+
+section.inicio h1, span{
+    font-family: var(--font-h);
+
 }
 
 img.foto-perfil{
@@ -33,8 +44,8 @@ div.column{
 }
 
 div.linha{
-    height: 10%;
-    border: 1px solid red;
+    height: 15%;
     display: flex;
     align-items: center;
+    gap: 25px;
 }
