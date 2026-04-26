@@ -110,8 +110,7 @@
     
     /* Botão Ver Projetos */
     .link-btn-projetos{
-        background: var(--accent-grad);
-       
+        background: var(--accent-grad);       
     }
     
     .link-btn-projetos:hover{

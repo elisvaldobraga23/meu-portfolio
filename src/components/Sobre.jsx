@@ -1,60 +1,5 @@
 import "../styles/Sobre.css"
-import { FaHtml5, FaCss3Alt, FaReact, FaPython, FaGitAlt, FaGithub } from "react-icons/fa";
-import { DiJavascript1 } from "react-icons/di";
-
-const linguagens = {
-    html:{
-        texto: "HTML5",
-        icon: FaHtml5,
-        color: "rgb(229, 83, 45)",
-        background: "#f16b3224"
-    },
-
-    css:{
-        texto: "CSS3",
-        icon: FaCss3Alt,
-        color: "#0881B9",
-        background: "#089FE725"
-
-    },
-
-    js:{
-        texto: "JavaScript",
-        icon: DiJavascript1,
-        color: "#FA9F2F",
-        background: "#FFCC4425"
-    },
-
-    react:{
-        texto: "React",
-        icon: FaReact,
-        color: "#1082A7",
-        background: "#1082A725"
-
-    },
-
-    py:{
-        texto: "Python",
-        icon: FaPython,
-        color: "#3D76A7",
-        background: "#FFD24615"
-    },
-    
-    git:{
-        texto: "Git",
-        icon: FaGitAlt,
-        color: "#DF523C",
-        background: "#47360840"
-    },
-
-    github:{
-        texto: "Github",
-        icon: FaGithub,
-        color: "#B90808",
-        background: "#B9080830"
-    },
-
-}
+import { dadosTecnologias } from "../data/linguagens.js"; 
 
 export function Sobre() {
     return (
@@ -79,21 +24,21 @@ export function Sobre() {
                        
                 <div className="cards">
                    
-                        {Object.values(linguagens).map((linguagem, index) => {
-                            const Icon = linguagem.icon;
+                        {Object.values(dadosTecnologias()).map((tecnologia, index) => {
+                            const Icon = tecnologia.icon;
                             return(
                                 <div className="card" key={index}>
                                     <Icon 
                                         className="icons" 
                                         style={{
-                                            color: linguagem.color, 
-                                            background: linguagem.background
+                                            color: tecnologia.color, 
+                                            background: tecnologia.background
                                             }} 
                                     />
                                     <h1 
                                         className="titulo-card"
-                                        style={{color:linguagem.color}}
-                                    >{linguagem.texto}</h1>
+                                        style={{color:tecnologia.color}}
+                                    >{tecnologia.texto}</h1>
                                 </div>
 
                             )

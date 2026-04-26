@@ -5,6 +5,7 @@ section#sobre{
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-margin-top: 85px;
 }
 
 section#sobre h1.titulo-sobre{
@@ -85,15 +86,19 @@ section#sobre h1.titulo-card{
 
 @media (min-width: 1024px) {
 
+    section#sobre{
+        width: 1355px;
+        margin: 0 auto;
+    }
+
     section#sobre h2{
         font-size: 2.3em;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     section#sobre > p{
         font-size: 15px;
-        margin-bottom: 75px;
-
+        margin-bottom: 35px;
     }
 
     section#sobre div.column{
@@ -106,35 +111,35 @@ section#sobre h1.titulo-card{
 
     section#sobre .p-sobre{
         font-size: 1.1em;
-
     }
 
     section#sobre div.linha{
         width: 100%;
+        padding: 15px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 60px;
         align-items: center;
-
-        
-
     }
 
     section#sobre .cards{
         width: 90%;
-        margin: 0 auto;
+        margin: 0 0 0 63px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
-
-    
     }
 
     section#sobre .card{
         margin: 0;
-        height: 90px;
-        transition: background 0.2s, border-color 0.2s, transform 0.2s;
-        
+        height: 90px;  
+        cursor: default; 
+    }
+
+    section#sobre .card:hover{
+        background: var(--surface-hover);
+        border-color: rgba(79,142,247,0.3);
+        transform: translateY(-3px);
     }
 
     section#sobre h1.titulo-card{

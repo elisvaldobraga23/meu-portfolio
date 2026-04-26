@@ -2,6 +2,7 @@
 import { Cabecalho } from './components/Cabecalho'
 import { Inicio } from './components/Inicio'
 import { Sobre } from './components/Sobre'
+import { Projetos } from './components/Projetos'
 import "./styles/Global.css"
 
 
@@ -13,6 +14,7 @@ function App() {
       <Cabecalho />
       <Inicio />
       <Sobre />
+      <Projetos />
     </>
   )
 }

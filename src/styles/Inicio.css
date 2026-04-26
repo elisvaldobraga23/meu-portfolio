@@ -1,10 +1,11 @@
 /* Mobile */
 section.inicio{
-    margin:50px auto;
+    margin: 100px auto 140px;
     padding: 0 5px;
     display: flex;
     flex-direction: column; 
-    justify-content: center;  
+    justify-content: center;
+    scroll-margin-top: 250px;
 }
 
 section.inicio h1{

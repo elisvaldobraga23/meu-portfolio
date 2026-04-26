@@ -1,0 +1,93 @@
+section#projetos{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+section#projetos h1.titulo-portfolio{
+    width: 50%;
+    margin: 0 auto 25px;
+    padding: 10px;
+}
+
+section#projetos h2{
+    font-size: 2.5em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+section#projetos > p{
+    margin: 0 0 50px;
+    font-family: var(--font-b);
+    color: var(--text-dim);
+    max-width: 500px;
+}
+
+section#projetos div.projeto{
+    width: 100%;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(16px) saturate(180%);
+    border-radius: var(--r); 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    border-radius: 20px;
+}
+
+section#projetos div.projeto img{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+section#projetos div.projeto h1{
+    font-size: 1.2em;
+    margin-left: 15px;
+    font-family: var(--font-h);
+    font-weight: 700;
+}
+
+section#projetos div.projeto p{
+    margin: 5px 15px 25px;
+    font-family: var(--font-b);
+    color: var(--text-dim);
+    text-align: justify;
+}
+
+section#projetos div.projeto div.tags{
+    display: flex;
+    margin-left: 15px;
+    gap: 10px;
+    
+    
+}
+
+section#projetos div.projeto div.tag{
+    width:  90px;
+    padding: 4px 11px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--glass-border);
+    color: var(--text-dim);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
