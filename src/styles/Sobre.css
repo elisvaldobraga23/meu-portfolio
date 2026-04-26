@@ -1,0 +1,157 @@
+/* MObile */
+
+section#sobre{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#sobre h1.titulo-sobre{
+    margin-bottom: 25px;
+}
+
+section#sobre h2{
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+section#sobre > p{
+    text-align: center;
+    font-family: var(--font-b);
+    font-size: 17px;
+    color: var(--text-dim);
+    max-width: 500px;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+section#sobre div.column{
+    padding: 10px;
+}
+
+section#sobre h3{
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+section#sobre .p-sobre{
+    color: var(--text-dim);
+    font-family: var(--font-b);
+    font-weight: 300;
+    text-align: justify;
+    margin-bottom: 20px;
+    line-height: 25px;
+
+}
+
+section#sobre div.linha{
+    display: flex;
+    flex-direction: column;
+
+}
+
+section#sobre .cards{
+    width: 90%;
+}
+
+section#sobre .card{
+    display: flex;
+    align-items: center;
+    height: 65px;
+    background-color: var(--glass);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 16px 20px;
+    margin-bottom: 15px;
+
+}
+
+section#sobre h1.titulo-card{
+    font-size: 17px;
+    font-family: var(--font-b);
+    font-weight: 500;
+}
+
+.icons{
+    padding: 5px;
+    font-size: 35px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+
+    section#sobre h2{
+        font-size: 2.3em;
+        margin-bottom: 10px;
+    }
+
+    section#sobre > p{
+        font-size: 15px;
+        margin-bottom: 75px;
+
+    }
+
+    section#sobre div.column{
+        width: 100%;
+    }
+
+    section#sobre h3{
+        font-size: 2.2em;
+    }
+
+    section#sobre .p-sobre{
+        font-size: 1.1em;
+
+    }
+
+    section#sobre div.linha{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+
+        
+
+    }
+
+    section#sobre .cards{
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+
+    
+    }
+
+    section#sobre .card{
+        margin: 0;
+        height: 90px;
+        transition: background 0.2s, border-color 0.2s, transform 0.2s;
+        
+    }
+
+    section#sobre h1.titulo-card{
+        font-size: 17px;
+        font-family: var(--font-b);
+        font-weight: 500;
+    }
+
+    .icons{
+        padding: 5px;
+        font-size: 35px;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
+}
+
+
+
+
+

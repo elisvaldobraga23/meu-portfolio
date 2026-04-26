@@ -17,6 +17,7 @@ section.inicio h1{
 }
 
 section.inicio p{
+
     font-family: var(--font-b);
     font-size: 1.3em;
     color: var(--text-dim);

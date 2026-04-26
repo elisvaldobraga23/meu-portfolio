@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { LinkBotao } from './LinkBotao';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import "../styles/Cabecalho.css"
 
 
@@ -11,6 +11,17 @@ export function Cabecalho(){
     function toggleMenu(){
         setAberto(prev => !prev);
     }
+
+    useEffect(() => {
+        function handleResize() {
+            if (window.innerWidth > 768) {
+                setAberto(false);
+            }
+        }
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+}, []);
 
     return (
         <header>
@@ -23,9 +34,9 @@ export function Cabecalho(){
                 </span>
                 </button>
                 <nav className={aberto ? "nav-cabecalho ativo" : "nav-cabecalho"}>
-                   <Link to="/" className="link-nav" onClick={toggleMenu}>Inicio</Link>
-                   <Link to="/sobre" className="link-nav" onClick={toggleMenu}>Sobre</Link>
-                   <Link to="/projetos" className="link-nav" onClick={toggleMenu}>Projetos</Link>
+                    <a href='#inicio' className="link-nav" onClick={() => setAberto(false)}>Inicio</a>
+                    <a href='#sobre' className="link-nav" onClick={() => setAberto(false)}>Sobre</a>
+                    <a href='#projetos' className="link-nav" onClick={() => setAberto(false)}>Projetos</a>
                 </nav>
                 <LinkBotao to="/contato" className="link-btn-cabecalho">Fale Comigo</LinkBotao>
             </div>
