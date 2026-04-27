@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { LinkBotao } from './LinkBotao';
 import { useState, useEffect } from 'react';
 import "../styles/Cabecalho.css"
@@ -38,7 +37,7 @@ export function Cabecalho(){
                     <a href='#sobre' className="link-nav" onClick={() => setAberto(false)}>Sobre</a>
                     <a href='#projetos' className="link-nav" onClick={() => setAberto(false)}>Projetos</a>
                 </nav>
-                <LinkBotao to="/contato" className="link-btn-cabecalho">Fale Comigo</LinkBotao>
+                <a href='#contato' className="link-btn-cabecalho">Fale Comigo</a>
             </div>
 
         </header>

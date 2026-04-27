@@ -3,6 +3,7 @@ import { Cabecalho } from './components/Cabecalho'
 import { Inicio } from './components/Inicio'
 import { Sobre } from './components/Sobre'
 import { Projetos } from './components/Projetos'
+import { Contato } from './components/Contato'
 import "./styles/Global.css"
 
 
@@ -15,6 +16,7 @@ function App() {
       <Inicio />
       <Sobre />
       <Projetos />
+      <Contato />
     </>
   )
 }
