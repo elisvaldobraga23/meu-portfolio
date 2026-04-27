@@ -1,0 +1,301 @@
+/* Mobile */
+section#contato{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* scroll-margin-top: 50px; */
+}
+
+section#contato h1.titulo-contato{
+    margin-bottom: 25px;
+}
+
+section#contato h2{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+section#contato p.p-contato{
+    font-family: var(--font-b);
+    font-size: 14px;
+    color: var(--text-dim);
+    max-width: 500px;
+    margin-bottom:45px ;
+    text-align: center;
+    line-height: 11px;
+}
+
+section#contato div.fale-comigo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section#contato div.fale-comigo h1{
+    font-family: var(--font-h);
+    font-weight: 600;
+}
+
+section#contato div.fale-comigo > p{
+    width: 325px;
+    font-family: var(--font-b);
+    font-size: 14px;
+    color: var(--text-dim);
+    text-align: justify;
+    margin-bottom: 20px;
+    
+}
+
+section#contato div.fale-comigo div.contatos{
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    transition: 0.2s ease;
+    
+}
+
+section#contato div.fale-comigo div.contatos .icon{
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+    background: var(--blue-dim);
+    border: 1px solid rgba(79, 142, 247, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--text-dim);
+}
+
+section#contato div.fale-comigo div.contatos p.contato-tipo{
+    font-family: var(--font-b);
+    font-size: 14px;
+    color: var(--text-dim);
+    margin-bottom: 2px;
+}
+
+section#contato div.fale-comigo div.contatos p.contato-info{
+    font-family: var(--font-b);
+    font-size: 15px;
+    color: #f0f4ffd3;
+    
+}
+
+section#contato div.fale-comigo div.redes-sociais{
+    width: 240px;
+    display: flex;
+    gap: 15px;
+    margin: 0 0 25px;
+}
+
+section#contato div.fale-comigo div.redes-sociais a.rede-social{
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    color: var(--text-dim);
+    transition: 0.2s ease;
+}
+
+section#contato form{
+    margin-top: 25px;
+    padding: 25px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    backdrop-filter: blur(16px);
+}
+
+section#contato form div.column{
+    display: flex;
+    flex-direction: column;
+}
+
+section#contato form label{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+}
+
+section#contato form input{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    padding: 13px 16px;
+    color: var(--text);
+    font-family: var(--font-b);
+    font-size: 14px;
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+}
+
+section#contato form textarea{
+    width: 100%;
+    min-height: 120px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    padding: 13px 16px;
+    color: var(--text);
+    font-family: var(--font-b);
+    font-size: 14px;
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+    resize: vertical;
+}
+
+section#contato form input::placeholder, 
+section#contato form textarea::placeholder{
+    color: var(--text-dim);
+}
+
+section#contato form button{
+    width: 100%;
+    padding: 15px;
+    background: var(--accent-grad);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-family: var(--font-b);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+    letter-spacing: 0.02em;
+}
+
+
+
+
+/* Desktop */
+@media (min-width: 1024px) {
+
+     section#contato{
+        padding: 20px 100px;
+        width: 1355px; 
+        scroll-margin-top: 95px;
+    }
+
+    section#contato h1.titulo-contato{
+
+        font-size: 1.7em;
+    }
+
+    
+    section#contato h2{
+        font-size: 2.5em;
+        margin-bottom: 2px;
+    }
+    
+    section#contato p.p-contato{
+        font-size: 15px; 
+        margin-bottom: 100px;
+    }
+    
+    section#contato div.grid{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+    }
+
+    section#contato div.fale-comigo h1{
+        font-size: 3em;
+        margin-bottom: 16px;
+    }
+
+    section#contato div.fale-comigo > p{
+        width: 400px;
+        font-size: 16px;
+        margin-bottom: 45px;   
+    }
+
+    section#contato div.fale-comigo div.contatos p.contato-tipo{
+        font-size: 15px;
+    }
+
+    section#contato div.fale-comigo div.contatos p.contato-info{
+        font-size: 17px;
+    }
+
+    section#contato div.fale-comigo div.contatos:hover{
+        background: var(--blue-dim);
+        color: var(--blue);
+        border-color: rgba(79,142,247,0.5);
+        transform: translateY(-2px);
+    }
+
+    section#contato div.fale-comigo div.redes-sociais{
+        margin: 28px 0 0;
+    }
+
+   section#contato div.fale-comigo div.redes-sociais a.rede-social:hover{
+        background: var(--blue-dim);
+        color: var(--blue);
+        border-color: rgba(79,142,247,0.5);
+        transform: translateY(-2px)
+    }
+
+    section#contato form{
+        margin: 0;
+        width: 100%;
+        padding: 35px;
+    }
+
+    section#contato form label{
+        font-size: 18px;
+    }
+
+    section#contato form input{
+        width: 200%;
+    }
+
+    section#contato form textarea{
+        width: 200%;
+        height: 50px;
+    }
+
+    section#contato form input::placeholder, 
+    section#contato form textarea::placeholder{
+        color: var(--text-dim);
+    }
+
+    section#contato form input:focus, 
+    section#contato form textarea:focus{
+        border-color: rgba(79,142,247,0.5); 
+        background: rgba(79,142,247,0.05); 
+    }
+
+
+    section#contato form button{
+        font-size: 17px;
+        margin-top: auto;
+    }
+
+    section#contato form button:hover{
+        opacity: 0.88;
+        transform: translateY(-2px); 
+    }
+    
+}
+
+

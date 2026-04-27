@@ -6,6 +6,7 @@ section#projetos{
     text-align: center;
     margin-bottom: 100px;
     scroll-margin-top: 100px;
+    margin: 0 15px;
 }
 
 section#projetos h1.titulo-portfolio{
@@ -15,7 +16,7 @@ section#projetos h1.titulo-portfolio{
 }
 
 section#projetos h2{
-    font-size: 2.5em;
+    font-size: 2.1em;
     width: 90%;
     margin: 0 auto;
 }
@@ -25,12 +26,14 @@ section#projetos > p{
     font-family: var(--font-b);
     color: var(--text-dim);
     max-width: 500px;
+    font-size: 15px;
 }
 
 section#projetos div.portfolio{
     display: flex;
     flex-direction: column;
     gap: 50px;
+    margin-bottom: 50px;
 }
 
 section#projetos div.projeto{
