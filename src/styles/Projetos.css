@@ -1,12 +1,15 @@
+/* Mobile */
 section#projetos{
     padding: 10px;
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 100px;
+    scroll-margin-top: 100px;
 }
 
 section#projetos h1.titulo-portfolio{
-    width: 50%;
+
     margin: 0 auto 25px;
     padding: 10px;
 }
@@ -24,6 +27,12 @@ section#projetos > p{
     max-width: 500px;
 }
 
+section#projetos div.portfolio{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
 section#projetos div.projeto{
     width: 100%;
     background: var(--glass);
@@ -35,6 +44,8 @@ section#projetos div.projeto{
     flex-direction: column;
     text-align: start;
     border-radius: 20px;
+    transition: transform 0.3s ease;
+    
 }
 
 section#projetos div.projeto img{
@@ -57,28 +68,111 @@ section#projetos div.projeto p{
 }
 
 section#projetos div.projeto div.tags{
-    display: flex;
-    margin-left: 15px;
+    margin: 0 0 25px 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-self: start;
     gap: 10px;
-    
-    
 }
 
 section#projetos div.projeto div.tag{
     width:  90px;
     padding: 4px 11px;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 14px; 
     font-weight: 500;
     text-align: center;
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid var(--glass-border);
-    color: var(--text-dim);
 }
 
 
+section#projetos div.projeto .links{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+}
 
 
+section#projetos div.projeto .link{
+    width: 100%;
+    color: var(--text);
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+section#projetos div.projeto .link-ver-projeto{
+    background: var(--accent-grad);
+    color: #fff;
+    border: transparent;
+}
+
+section#projetos div.projeto .link-github{
+    border: 1px solid var(--glass-border);
+    background-color: rgba(255, 255, 255, 0.04);
+    color: var(--text-dim);
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+
+    section#projetos{
+        margin: 100px 0;
+        padding: 0 100px;
+    }
+
+    section#projetos h1.titulo-portfolio{
+        width: 15%;
+    }
+
+    section#projetos h2{
+        font-size: 3em;
+    }
+
+    section#projetos > p{
+        margin: 0 auto 50px;
+    }
+
+    section#projetos div.portfolio{
+        padding: 0 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px;
+    }
+
+    section#projetos div.projeto:hover{
+        transform: translateY(-8px);
+        border-color: rgba(79,142,247,0.35);
+        box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(79,142,247,0.1);
+    }
+
+    section#projetos div.projeto h1{
+        font-size: 1.3em;
+    }
+
+    section#projetos div.projeto p{
+        font-size: 15px;
+    }
+
+    section#projetos div.projeto .links{
+        width: 92%;
+        margin: auto auto 15px;
+    }
+
+    section#projetos div.projeto .link-ver-projeto:hover{
+        opacity: 0.85; color: #fff; 
+    }
+
+    section#projetos div.projeto .link-github:hover{
+        background: var(--blue-dim);
+        color: var(--blue);
+        border-color: rgba(79,142,247,0.5);
+    }   
+}
 
 
 

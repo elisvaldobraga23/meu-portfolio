@@ -9,7 +9,7 @@ export function Projetos(){
             <h2>Meus <span>Projetos</span></h2>
             <p>Linhas de código que constroem experiências</p>
 
-            <div className="projetos">
+            <div className="portfolio">
 
                 {Object.values(dataProjetos()).map((projeto, index) => 
                     <div className="projeto" key={index}>
@@ -24,8 +24,10 @@ export function Projetos(){
                             )}
                         </div>
 
-                        <a className="ver-projeto" href={projeto.link} target="_blank">Ver Projeto</a>
-                        <a className="github" href={projeto.linkGithub} target="_blank">GitHub</a>
+                        <div className="links">
+                            <a className="link link-ver-projeto" href={projeto.link} target="_blank">Ver Projeto</a>
+                            <a className="link link-github" href={projeto.linkGithub} target="_blank">GitHub</a>
+                        </div>
                     </div>
                 )}
 
