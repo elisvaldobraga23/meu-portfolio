@@ -1,9 +1,33 @@
+import { useState } from "react";
 import { MdAlternateEmail } from "react-icons/md";
 import { FaWhatsapp, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { BotaoEnviar } from "./BotaoEnviar";
 import "../styles/Contato.css";
 
 export function Contato() {
+    const [enviado, setEnviado] = useState(false);
+
+  function handleSubmit(e) {
+  e.preventDefault();
+
+  const form = e.target;
+
+  if (!form.checkValidity()) {
+    return; // não anima
+  }
+
+  setEnviado(true);
+
+  setTimeout(() => {
+    form.reset()
+  }, 2500);
+
+  setTimeout(() => {
+    setEnviado(false);
+  }, 2500);
+}
+
   return (
     <section id="contato">
       <h1 className="titulo titulo-contato">Contato</h1>
@@ -59,7 +83,7 @@ export function Contato() {
           </div>
         </div>
 
-        <form action="#">
+        <form action="#" onSubmit={handleSubmit}>
           <div className="form-nome column">
             <label htmlFor="nome">Nome Completo</label>
             <input type="text" id="nome" placeholder="Seu nome" required />
@@ -82,7 +106,7 @@ export function Contato() {
               required
             ></textarea>
           </div>
-          <button type="submit">Enviar mensagem</button>
+          <BotaoEnviar enviado={enviado}></BotaoEnviar>
         </form>
       </div>
     </section>

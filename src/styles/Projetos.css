@@ -125,7 +125,7 @@ section#projetos div.projeto .link-github{
 
     section#projetos{
         width: 1355px;
-        margin: 100px 0;
+        margin: 100px auto;
         padding: 0 100px;
     }
 

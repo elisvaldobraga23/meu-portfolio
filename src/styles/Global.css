@@ -66,16 +66,4 @@ h1.titulo{
 }
 
 
-/* Desktop */
-@media (min-width: 1024px) {
-  
-    body{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    
-}
-
-
 

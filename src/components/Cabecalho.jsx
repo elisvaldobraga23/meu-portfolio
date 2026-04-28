@@ -1,4 +1,3 @@
-import { LinkBotao } from './LinkBotao';
 import { useState, useEffect } from 'react';
 import "../styles/Cabecalho.css"
 

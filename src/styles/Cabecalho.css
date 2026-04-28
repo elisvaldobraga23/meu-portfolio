@@ -1,6 +1,5 @@
 
 /* Mobile */
-
 header{
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     backdrop-filter: blur(20px) saturate(180%);
@@ -76,7 +75,6 @@ header h1{
 }
 
 /* Menu Hambúrguer */
-
 button.hamburguer{
 display: flex;
 background: transparent;
@@ -93,13 +91,36 @@ cursor: pointer;
     font-size: 40px;
 }
 
+/* Botão Cabeçalho */
+/* Mobile */
+.link-btn-cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 20px;
+    background-color: var(--blue);
+    color: var(--text);
+    border: none;
+    cursor: pointer;
+}
+    
+.link-btn-cabecalho:active{
+    background-color: var(--blue-hover);
+    color: var(--accent-grad);
+}
+
+
 
 /* Desktop */
 @media (min-width: 1024px) {
     
     header{ 
         height: 70px;
-        width: 100%;
         border-bottom: 1px solid rgba(253, 253, 253, 0.11);
     }
 
@@ -108,7 +129,20 @@ cursor: pointer;
         font-size: 24px;
         line-height: 17px;
 
-}
+    }
+
+    /* Botão Cabeçalho */
+    .link-btn-cabecalho{
+        width: 125px;
+        height: 40px;
+        font-size: 15px;
+
+    }
+    
+    .link-btn-cabecalho:hover{
+        background-color: var(--blue-hover);
+        color: var(--accent-grad);
+    }
 
     .cabecalho{
         height: 70px;
