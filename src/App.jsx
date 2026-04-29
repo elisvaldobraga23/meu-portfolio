@@ -1,4 +1,5 @@
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Cabecalho } from './components/Cabecalho'
 import { Inicio } from './components/Inicio'
 import { Sobre } from './components/Sobre'
@@ -17,6 +18,7 @@ function App() {
       <Inicio />
       <Sobre />
       <Projetos />
+      <ToastContainer />
       <Contato />
       <Rodape />
     </>

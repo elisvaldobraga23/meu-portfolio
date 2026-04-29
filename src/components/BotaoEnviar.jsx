@@ -4,7 +4,7 @@ export function BotaoEnviar({ enviado }) {
       type="submit"
       style={{ opacity: enviado ? 0.7 : 1 }}
     >
-      {enviado ? "Mensagem enviada ✓" : "Enviar mensagem ✦"}
+      {enviado ? "Enviando mensagem" : "Enviar mensagem"}
     </button>
   );
 }

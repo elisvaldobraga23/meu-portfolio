@@ -1,31 +1,67 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { MdAlternateEmail } from "react-icons/md";
 import { FaWhatsapp, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { BotaoEnviar } from "./BotaoEnviar";
+import { toast } from "react-toastify";
 import "../styles/Contato.css";
 
+function formatarNome(nome) {
+  const ignorar = ["da", "de", "do", "das", "dos"];
+
+  return nome
+    .toLowerCase()
+    .trim()
+    .split(" ")
+    .filter(Boolean)
+    .map(p =>
+      ignorar.includes(p)
+        ? p
+        : p.charAt(0).toUpperCase() + p.slice(1)
+    )
+    .join(" ");
+}
+
 export function Contato() {
-    const [enviado, setEnviado] = useState(false);
+  const [enviado, setEnviado] = useState(false);
+  const form = useRef();
 
   function handleSubmit(e) {
   e.preventDefault();
 
-  const form = e.target;
+  setEnviado(true)
 
-  if (!form.checkValidity()) {
+  const formEnvio = e.target;
+
+  if (!formEnvio.checkValidity()) {
     return; // não anima
   }
+    const formEl = form.current;
 
-  setEnviado(true);
+    // 👉 formata o nome antes de enviar
+    formEl.name.value = formatarNome(formEl.name.value);
 
-  setTimeout(() => {
-    form.reset()
-  }, 2500);
-
-  setTimeout(() => {
-    setEnviado(false);
-  }, 2500);
+  emailjs
+    .sendForm("service_76tdscp", 'template_5juibg3', formEl, {
+      publicKey:'TyOl4Ja_2ImA6AWdW'
+    })
+    .then(() => {
+      
+      setTimeout(() => {
+        toast.success("E-mail enviado com sucesso");
+        formEl.reset();
+        setEnviado(false);
+      }, 2500);
+    })
+    .catch((error) => {
+      setTimeout(() => {
+        setEnviado(false)
+        toast.error("Falha ao enviar o E-mail!");
+        console.log(error);
+      }, 2500);
+    });
 }
 
   return (
@@ -83,15 +119,16 @@ export function Contato() {
           </div>
         </div>
 
-        <form action="#" onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={handleSubmit}>
           <div className="form-nome column">
             <label htmlFor="nome">Nome Completo</label>
-            <input type="text" id="nome" placeholder="Seu nome" required />
+            <input type="text" name="name" id="nome" placeholder="Seu nome" required />
           </div>
           <div className="form-email column">
             <label htmlFor="email">E-mail</label>
             <input
               type="email"
+              name="email"
               id="email"
               placeholder="seu@email.com"
               required
@@ -100,13 +137,14 @@ export function Contato() {
           <div className="form-msg column">
             <label htmlFor="msg">Mensagem</label>
             <textarea
+              name="message"
               id="msg"
               rows={10}
               placeholder="Conte sobre seu projeto ou ideia..."
               required
             ></textarea>
           </div>
-          <BotaoEnviar enviado={enviado}></BotaoEnviar>
+          <BotaoEnviar value="Send" enviado={enviado}></BotaoEnviar>
         </form>
       </div>
     </section>
