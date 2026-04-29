@@ -79,12 +79,14 @@ section#projetos div.projeto div.tags{
 }
 
 section#projetos div.projeto div.tag{
-    width:  90px;
-    padding: 4px 11px;
+    width:  auto;
+    padding: 4px 10px;
     border-radius: 50px;
-    font-size: 14px; 
+    font-size: 12px; 
     font-weight: 500;
+    display: flex;
     text-align: center;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid var(--glass-border);
 }
@@ -120,11 +122,41 @@ section#projetos div.projeto .link-github{
     color: var(--text-dim);
 }
 
+/* Tablet */
+@media (min-width: 768px) {
+
+    section#projetos > p{
+        margin: 0 auto 50px;
+    }
+
+        section#projetos div.portfolio{
+        padding: 0 10px;
+        width: 80%;
+        margin: 0 auto;
+        
+    }
+
+    section#projetos div.projeto h1{
+        font-size: 1.5em;
+    }
+
+    section#projetos div.projeto p{
+        font-size: 17px;
+    }
+
+    section#projetos div.projeto .links{
+        width: 90%;
+        margin: auto auto 15px;
+    }
+    
+}
+
 /* Desktop */
 @media (min-width: 1024px) {
 
     section#projetos{
-        width: 1355px;
+        width: 100%;
+        max-width: 1355px;
         margin: 100px auto;
         padding: 0 100px;
     }
@@ -137,11 +169,8 @@ section#projetos div.projeto .link-github{
         font-size: 3em;
     }
 
-    section#projetos > p{
-        margin: 0 auto 50px;
-    }
-
     section#projetos div.portfolio{
+        width: 100%;
         padding: 0 10px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
