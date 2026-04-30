@@ -1,7 +1,11 @@
 
 /* Mobile */
 header{
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; 
+    z-index: 100;
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     background: rgba(7,9,15,0.4);
