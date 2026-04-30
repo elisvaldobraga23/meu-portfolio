@@ -6,6 +6,7 @@ import imgAgenciaViagem from "../assets/img/agencia-viagens.png";
 import imgTelaLogin from "../assets/img/tela-login.png";
 import imgGeradorSenha from "../assets/img/tela-gerador-de-senha.png";
 import imgCalculadoraImc from "../assets/img/calculadora-imc.png";
+import imgRefriDev from "../assets/img/refri-do-dev.png";
 
 export function dataProjetos() {
 
@@ -74,6 +75,14 @@ export function dataProjetos() {
             img: imgCalculadoraImc,
             link: "https://elisvaldobraga23.github.io/calculadora_imc/",
             linkGithub: "https://github.com/elisvaldobraga23/calculadora_imc"
+        },
+        projeto09:{
+            Titulo:"Refri do Dev",
+            descricao:"Slider animado de refrigerantes com troca de itens, transições suaves e mudança dinâmica de conteúdo, criando uma interface interativa e visualmente atrativa.",
+            tags:["HTML5", "CSS3", "JavaScript"],
+            img: imgRefriDev,
+            link: "https://elisvaldobraga23.github.io/refri_do_dev/",
+            linkGithub: "https://github.com/elisvaldobraga23/refri_do_dev"
         },
 
     }

@@ -85,19 +85,23 @@ export function Contato() {
           </p>
 
 
-          <div className="contatos">
-            <MdAlternateEmail className="icon" />
-            <div className="contatos-column">
-              <p className="contato-tipo">E-mail</p>
-              <p className="contato-info">elisvaldo123braga03@gmail.com</p>
+            <div className="contatos">
+              <a href="mailto:elisvaldo123braga03@gmail.com" target="_blank">
+                <MdAlternateEmail className="icon" />
+                <div className="contatos-column">
+                  <p className="contato-tipo">E-mail</p>
+                  <p className="contato-info">elisvaldo123braga03@gmail.com</p>
+                </div>
+              </a>
             </div>
-          </div>
           <div className="contatos">
-            <FaWhatsapp className="icon" />
-            <div className="contatos-column">
-              <p className="contato-tipo">WhatsApp</p>
-              <p className="contato-info">+55 (88) 9 9629-2920</p>
+            <a href="https://wa.me/5588996292920" target="_blank">
+              <FaWhatsapp className="icon" />
+              <div className="contatos-column">
+                <p className="contato-tipo">WhatsApp</p>
+                <p className="contato-info">+55 (88) 9 9629-2920</p>
             </div>
+            </a>
           </div>
           <div className="contatos">
             <FaLocationDot className="icon" />
@@ -107,13 +111,13 @@ export function Contato() {
             </div>
           </div>
           <div className="redes-sociais">
-            <a title="GitHub" className="rede-social icon" href="#">
+            <a href="https://github.com/elisvaldobraga23" target="_blank" title="GitHub" className="rede-social icon">
               <FaGithub />
             </a>
-            <a title="Linkedin" className="rede-social" href="#">
+            <a href="https://www.linkedin.com/in/elisvaldo-braga/" target="_blank" title="Linkedin" className="rede-social">
               <FaLinkedin />
             </a>
-            <a title="Instagram" className="rede-social" href="#">
+            <a href="https://www.instagram.com/elisvaldobraga/" target="_blank" title="Instagram" className="rede-social">
               <FaInstagram />
             </a>
           </div>

@@ -4,7 +4,8 @@ section#contato{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* scroll-margin-top: 50px; */
+    scroll-margin-top: 70px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 section#contato h1.titulo-contato{
@@ -56,8 +57,16 @@ section#contato div.fale-comigo div.contatos{
     border: 1px solid var(--glass-border);
     backdrop-filter: blur(10px);
     border-radius: 12px;
-    transition: 0.2s ease;
-    
+    transition: 0.2s ease; 
+}
+
+section#contato div.fale-comigo div.contatos a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 section#contato div.fale-comigo div.contatos .icon{
@@ -74,6 +83,7 @@ section#contato div.fale-comigo div.contatos .icon{
     color: var(--text-dim);
 }
 
+section#contato div.fale-comigo div.contatos a p.contato-tipo,
 section#contato div.fale-comigo div.contatos p.contato-tipo{
     font-family: var(--font-b);
     font-size: 14px;
@@ -81,11 +91,18 @@ section#contato div.fale-comigo div.contatos p.contato-tipo{
     margin-bottom: 2px;
 }
 
+section#contato div.fale-comigo div.contatos a p.contato-info,
 section#contato div.fale-comigo div.contatos p.contato-info{
     font-family: var(--font-b);
     font-size: 15px;
     color: #f0f4ffd3;
-    
+}
+
+section#contato div.fale-comigo div.contatos:active{
+    background: var(--blue-dim);
+    color: var(--blue);
+    border-color: rgba(79,142,247,0.5);
+    transform: translateY(-2px);
 }
 
 section#contato div.fale-comigo div.redes-sociais{

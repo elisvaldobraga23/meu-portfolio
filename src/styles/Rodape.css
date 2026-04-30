@@ -9,6 +9,7 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    -webkit-tap-highlight-color: transparent;
 }
 footer p.copy{
     color: var(--text-muted);

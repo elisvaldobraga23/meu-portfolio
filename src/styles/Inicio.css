@@ -6,6 +6,7 @@ section.inicio{
     flex-direction: column; 
     justify-content: center;
     scroll-margin-top: 250px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 section.inicio h1{

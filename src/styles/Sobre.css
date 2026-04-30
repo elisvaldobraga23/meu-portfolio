@@ -6,6 +6,7 @@ section#sobre{
     flex-direction: column;
     align-items: center;
     scroll-margin-top: 100px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 section#sobre h1.titulo-sobre{
