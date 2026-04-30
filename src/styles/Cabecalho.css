@@ -74,6 +74,14 @@ header h1{
 
 }
 
+.material-symbols-outlined {
+  transition: transform 0.3s ease;
+}
+
+.hamburguer.ativo .material-symbols-outlined {
+  transform: rotate(90deg);
+}
+
 .link-nav:active{
     color: var(--text); 
     transform: scale(1.01)

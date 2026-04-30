@@ -28,7 +28,7 @@ export function Cabecalho(){
                 <h1>Elisvaldo <span>Braga</span></h1>
                 <button className='hamburguer' onClick={toggleMenu}>
                     <span className="material-symbols-outlined">
-                menu
+                {aberto ? "close" : "menu"}
                 </span>
                 </button>
                 <nav className={aberto ? "nav-cabecalho ativo" : "nav-cabecalho"}>
