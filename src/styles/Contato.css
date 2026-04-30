@@ -209,7 +209,7 @@ section#contato form button{
 /* Tablet */
 @media (min-width: 768px) {
 
-     section#contato{
+    section#contato{
         padding: 20px 50px;
         scroll-margin-top: 95px;
 

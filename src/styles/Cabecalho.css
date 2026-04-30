@@ -132,7 +132,7 @@ cursor: pointer;
 /* Desktop */
 @media (min-width: 1024px) {
     
-    header{ 
+    header{
         height: 70px;
         border-bottom: 1px solid rgba(253, 253, 253, 0.11);
     }
