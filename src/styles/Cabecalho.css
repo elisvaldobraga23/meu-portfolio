@@ -7,7 +7,6 @@ header{
     right: 0; 
     z-index: 100;
     backdrop-filter: blur(20px) saturate(180%);
-    /* -webkit-backdrop-filter: blur(20px) saturate(180%); */
     background: rgba(7,9,15,0.4);
     border-bottom: 1px solid var(--glass-border);
     transition: background 0.3s;
@@ -50,6 +49,7 @@ header h1{
 
 .nav-cabecalho.ativo {
 
+    margin-top: 62px;
     display: flex;
     flex-direction: column;
     text-align: center;
