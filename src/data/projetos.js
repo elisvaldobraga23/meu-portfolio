@@ -7,6 +7,7 @@ import imgTelaLogin from "../assets/img/tela-login.png";
 import imgGeradorSenha from "../assets/img/tela-gerador-de-senha.png";
 import imgCalculadoraImc from "../assets/img/calculadora-imc.png";
 import imgRefriDev from "../assets/img/refri-do-dev.png";
+import imgTechStore from "../assets/img/techstore.png";
 
 export function dataProjetos() {
 
@@ -83,6 +84,14 @@ export function dataProjetos() {
             img: imgRefriDev,
             link: "https://elisvaldobraga23.github.io/refri_do_dev/",
             linkGithub: "https://github.com/elisvaldobraga23/refri_do_dev"
+        },
+        projeto10:{
+            Titulo:"Tech Store",
+            descricao:"Simulação de um e-commerce de tecnologia com interface responsiva, renderização dinâmica de produtos, modal interativo e consulta de CEP via API ViaCEP.",
+            tags:["HTML5", "CSS3", "JavaScript", "API ViaCEP", "Toastify JS"],
+            img: imgTechStore,
+            link: "https://elisvaldobraga23.github.io/techstore-site/",
+            linkGithub: "https://github.com/elisvaldobraga23/techstore-site"
         },
 
     }

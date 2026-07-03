@@ -1,4 +1,4 @@
-import { FaHtml5, FaCss3Alt, FaReact, FaPython, FaGitAlt, FaGithub } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaPython, FaGitAlt, FaGithub, FaVuejs  } from "react-icons/fa";
 import { DiJavascript1 } from "react-icons/di";
 
 export function dadosTecnologias(){
@@ -32,6 +32,14 @@ export function dadosTecnologias(){
         icon: FaReact,
         color: "#1082A7",
         background: "#1082A725"
+
+    },
+
+    vue:{
+        texto: "Vue.js",
+        icon: FaVuejs,
+        color: "#3FB27F",
+        background: "#35495E"
 
     },
 
