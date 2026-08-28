@@ -7,6 +7,9 @@ import { FaLocationDot } from "react-icons/fa6";
 import { BotaoEnviar } from "./BotaoEnviar";
 import { toast } from "react-toastify";
 import "../styles/Contato.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 function formatarNome(nome) {
   const ignorar = ["da", "de", "do", "das", "dos"];
@@ -25,6 +28,14 @@ function formatarNome(nome) {
 }
 
 export function Contato() {
+
+   useEffect(() => {
+          AOS.init({
+              duration: 800,
+              once: false
+          });
+      }, []);
+
   const [enviado, setEnviado] = useState(false);
   const form = useRef();
 
@@ -66,17 +77,17 @@ export function Contato() {
 
   return (
     <section id="contato">
-      <h1 className="titulo titulo-contato">Contato</h1>
-      <h2>
+      <h1 data-aos="fade-down" className="titulo titulo-contato">Contato</h1>
+      <h2 data-aos="fade-down">
         Vamos <span>Conversar</span>
       </h2>
-      <p className="p-contato">
+      <p data-aos="fade-down" className="p-contato">
         Tem um projeto em mente? <br />
         Estou pronto para transformá-lo em realidade.
       </p>
 
       <div className="grid">
-        <div className="fale-comigo">
+        <div data-aos="fade-right" className="fale-comigo">
           <h1>Fale comigo</h1>
           <p>
             Seja para um projeto freelance, uma oportunidade de trabalho, ou
@@ -85,7 +96,10 @@ export function Contato() {
           </p>
 
 
-            <div className="contatos">
+            <div data-aos="fade-right"
+        data-aos-duration="4000"
+        data-aos-delay="0"
+        data-aos-easing="ease-in-out" className="contatos">
               <a href="mailto:elisvaldo123braga03@gmail.com" target="_blank">
                 <MdAlternateEmail className="icon" />
                 <div className="contatos-column">
@@ -94,7 +108,11 @@ export function Contato() {
                 </div>
               </a>
             </div>
-          <div className="contatos">
+          <div 
+          data-aos="fade-right"
+        data-aos-duration="4000"
+        data-aos-delay="800"
+        data-aos-easing="ease-in-out" className="contatos">
             <a href="https://wa.me/5588996292920" target="_blank">
               <FaWhatsapp className="icon" />
               <div className="contatos-column">
@@ -103,7 +121,10 @@ export function Contato() {
             </div>
             </a>
           </div>
-          <div className="contatos">
+          <div data-aos="fade-right"
+        data-aos-duration="4000"
+        data-aos-delay="1600"
+        data-aos-easing="ease-in-out" className="contatos">
             <FaLocationDot className="icon" />
             <div className="contatos-column">
               <p className="contato-tipo">Localização</p>
@@ -123,7 +144,7 @@ export function Contato() {
           </div>
         </div>
 
-        <form ref={form} onSubmit={handleSubmit}>
+        <form data-aos="fade-left" ref={form} onSubmit={handleSubmit}>
           <div className="form-nome column">
             <label htmlFor="nome">Nome Completo</label>
             <input type="text" name="name" id="nome" placeholder="Seu nome" required />

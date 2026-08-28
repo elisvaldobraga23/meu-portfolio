@@ -1,28 +1,38 @@
 import "../styles/Sobre.css"
 import { dadosTecnologias } from "../data/linguagens.js"; 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 export function Sobre() {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: false
+        });
+    }, []);
+
     return (
         <section id="sobre">
-            <h1 className="titulo titulo-sobre">Sobre Mim</h1>
-            <h2>Código com <span>Propósito</span></h2>
-            <p>Cada pixel e cada linha de código tem um motivo de existir</p>
+            <h1 data-aos="fade-down" className="titulo titulo-sobre">Sobre Mim</h1>
+            <h2 data-aos="fade-down">Código com <span>Propósito</span></h2>
+            <p data-aos="fade-down">Cada pixel e cada linha de código tem um motivo de existir</p>
 
             <div className="linha">
                 <div className="column">
-                    <h3>Olá, Sou Elisvaldo Braga</h3>
-                    <p className="p-sobre">
+                    <h3 data-aos="fade-right">Olá, Sou Elisvaldo Braga</h3>
+                    <p data-aos="fade-right" className="p-sobre">
                         Desenvolvedor Front-End apaixonado por criar interfaces que combinam beleza com funcionalidade. Trabalho com as tecnologias mais modernas do mercado para transformar ideias em produtos digitais de alto impacto.</p>
 
-                <p className="p-sobre">Com foco em performance, acessibilidade e design centrado no usuário, entrego experiências que encantam tanto quem usa quanto quem assina o código.</p>
-                
-                <p className="p-sobre">Quando não estou codando, estou explorando tendências de UI/UX, contribuindo para projetos open source, ou tomando um café enquanto planejo o próximo desafio.
-                    </p>
+                    <p data-aos="fade-right" className="p-sobre">Com foco em performance, acessibilidade e design centrado no usuário, entrego experiências que encantam tanto quem usa quanto quem assina o código.</p>
+                    
+                    <p data-aos="fade-right" className="p-sobre">Quando não estou codando, estou explorando tendências de UI/UX, contribuindo para projetos open source, ou tomando um café enquanto planejo o próximo desafio.</p>
                 </div>
 
                 
                        
-                <div className="cards">
+                <div data-aos="fade-left" className="cards">
                    
                         {Object.values(dadosTecnologias()).map((tecnologia, index) => {
                             const Icon = tecnologia.icon;
