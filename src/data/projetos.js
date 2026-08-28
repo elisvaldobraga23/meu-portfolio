@@ -8,6 +8,7 @@ import imgGeradorSenha from "../assets/img/tela-gerador-de-senha.png";
 import imgCalculadoraImc from "../assets/img/calculadora-imc.png";
 import imgRefriDev from "../assets/img/refri-do-dev.png";
 import imgTechStore from "../assets/img/techstore.png";
+import imgSistemaNota from "../assets/img/sistema-notas-escolar.png"
 
 export function dataProjetos() {
 
@@ -92,6 +93,14 @@ export function dataProjetos() {
             img: imgTechStore,
             link: "https://elisvaldobraga23.github.io/techstore-site/",
             linkGithub: "https://github.com/elisvaldobraga23/techstore-site"
+        },
+        projeto11:{
+            Titulo:"Sistema Notas Escolar",
+            descricao:"Sistema de Notas Escolares desenvolvido em Vue 3 como projeto de certificação do curso de Vue 3 do canal Ralf Lima.",
+            tags:["HTML5", "CSS3", "JavaScript", "Vue3", "Toastify JS", "Vite", "localStorage"],
+            img: imgSistemaNota,
+            link: "https://sistemanotasescolares.netlify.app/",
+            linkGithub: "https://github.com/elisvaldobraga23/sistema-notas-escolares"
         },
 
     }
