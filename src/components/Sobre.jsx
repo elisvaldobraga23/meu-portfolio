@@ -22,12 +22,12 @@ export function Sobre() {
             <div className="linha">
                 <div className="column">
                     <h3 data-aos="fade-right">Olá, Sou Elisvaldo Braga</h3>
-                    <p data-aos="fade-right" className="p-sobre">
+                    <p className="p-sobre">
                         Desenvolvedor Front-End apaixonado por criar interfaces que combinam beleza com funcionalidade. Trabalho com as tecnologias mais modernas do mercado para transformar ideias em produtos digitais de alto impacto.</p>
 
-                    <p data-aos="fade-right" className="p-sobre">Com foco em performance, acessibilidade e design centrado no usuário, entrego experiências que encantam tanto quem usa quanto quem assina o código.</p>
+                    <p className="p-sobre">Com foco em performance, acessibilidade e design centrado no usuário, entrego experiências que encantam tanto quem usa quanto quem assina o código.</p>
                     
-                    <p data-aos="fade-right" className="p-sobre">Quando não estou codando, estou explorando tendências de UI/UX, contribuindo para projetos open source, ou tomando um café enquanto planejo o próximo desafio.</p>
+                    <p className="p-sobre">Quando não estou codando, estou explorando tendências de UI/UX, contribuindo para projetos open source, ou tomando um café enquanto planejo o próximo desafio.</p>
                 </div>
 
                 
